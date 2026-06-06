@@ -45,9 +45,9 @@ stages {
             "%PYTHON_HOME%\\python.exe" -m pytest tests ^
             -v ^
             --html=reports/report.html ^
-            --self-contained-html
+            --self-contained-html ^
+            --alluredir=allure-results
             '''
-
         }
     }
 
@@ -66,6 +66,29 @@ stages {
 
         }
     }
+
+    stage('Publish Allure Report') {
+
+        steps {
+
+            allure(
+                includeProperties: false,
+                jdk: '',
+                results: [[path: 'allure-results']]
+            )
+
+        }
+    }
+}
+
+post {
+
+    always {
+
+        archiveArtifacts artifacts: 'screenshots/*.png'
+
+    }
+
 }
 
 }
