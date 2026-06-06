@@ -63,6 +63,7 @@ stages {
                 reportFiles: 'report.html',
                 reportName: 'Automation Test Report'
             ])
+
         }
     }
 }
