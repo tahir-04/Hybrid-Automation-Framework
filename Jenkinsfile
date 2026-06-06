@@ -2,6 +2,12 @@ pipeline {
 
 agent any
 
+environment {
+
+    PYTHON_HOME = "C:\\Users\\tahir\\AppData\\Local\\Programs\\Python\\Python311"
+
+}
+
 stages {
 
     stage('Checkout') {
@@ -17,7 +23,7 @@ stages {
 
         steps {
 
-            bat 'python --version'
+            bat '"%PYTHON_HOME%\\python.exe" --version'
 
         }
     }
@@ -26,7 +32,7 @@ stages {
 
         steps {
 
-            bat 'pip install -r requirements.txt'
+            bat '"%PYTHON_HOME%\\python.exe" -m pip install -r requirements.txt'
 
         }
     }
@@ -35,11 +41,10 @@ stages {
 
         steps {
 
-            bat 'pytest tests -v'
+            bat '"%PYTHON_HOME%\\python.exe" -m pytest tests -v'
 
         }
     }
 }
-
 
 }
