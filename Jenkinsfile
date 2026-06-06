@@ -82,13 +82,12 @@ stages {
 }
 
 post {
-
     always {
-
-        archiveArtifacts artifacts: 'screenshots/*.png'
-
+        archiveArtifacts(
+            artifacts: 'screenshots/*.png',
+            allowEmptyArchive: true
+        )
     }
-
 }
 
 }
