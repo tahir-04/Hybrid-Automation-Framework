@@ -19,6 +19,7 @@ stages {
         steps {
 
             bat 'python --version'
+
         }
     }
 
@@ -27,6 +28,7 @@ stages {
         steps {
 
             bat 'pip install -r requirements.txt'
+
         }
     }
 
@@ -35,6 +37,7 @@ stages {
         steps {
 
             bat 'pytest tests -v'
+
         }
     }
 }
