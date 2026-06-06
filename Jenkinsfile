@@ -41,8 +41,28 @@ stages {
 
         steps {
 
-            bat '"%PYTHON_HOME%\\python.exe" -m pytest tests -v'
+            bat '''
+            "%PYTHON_HOME%\\python.exe" -m pytest tests ^
+            -v ^
+            --html=reports/report.html ^
+            --self-contained-html
+            '''
 
+        }
+    }
+
+    stage('Publish HTML Report') {
+
+        steps {
+
+            publishHTML([
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'reports',
+                reportFiles: 'report.html',
+                reportName: 'Automation Test Report'
+            ])
         }
     }
 }
