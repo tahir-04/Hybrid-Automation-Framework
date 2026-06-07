@@ -9,6 +9,8 @@ from utilities.screenshot_util import ScreenshotUtil
 
 from pytest_metadata.plugin import metadata_key
 
+from utilities.allure_environment import create_environment_file
+
 log = get_logger()
 
 
@@ -32,6 +34,8 @@ def driver():
     log.info("Closing Browser")
 
     driver.quit()
+
+    create_environment_file()
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(
