@@ -1,0 +1,196 @@
+Started by user Mohamed Tahir
+Obtained Jenkinsfile from git https://github.com/tahir-04/Hybrid-Automation-Framework.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\Hybrid Automation Framework
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > C:\Program Files\Git\cmd\git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\Hybrid Automation Framework\.git # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\cmd\git.exe config remote.origin.url https://github.com/tahir-04/Hybrid-Automation-Framework.git # timeout=10
+Fetching upstream changes from https://github.com/tahir-04/Hybrid-Automation-Framework.git
+ > C:\Program Files\Git\cmd\git.exe --version # timeout=10
+ > git --version # 'git version 2.53.0.windows.1'
+ > C:\Program Files\Git\cmd\git.exe fetch --tags --force --progress -- https://github.com/tahir-04/Hybrid-Automation-Framework.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Program Files\Git\cmd\git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 6dd43a1d267c0910c657e636ae7a9da67f661664 (refs/remotes/origin/main)
+ > C:\Program Files\Git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\cmd\git.exe checkout -f 6dd43a1d267c0910c657e636ae7a9da67f661664 # timeout=10
+Commit message: "Added Allure environment and categories configuration"
+ > C:\Program Files\Git\cmd\git.exe rev-list --no-walk 44a6bd33f4d52fd964fc9b7ba75fbe8df2a19968 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > C:\Program Files\Git\cmd\git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\Hybrid Automation Framework\.git # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\cmd\git.exe config remote.origin.url https://github.com/tahir-04/Hybrid-Automation-Framework.git # timeout=10
+Fetching upstream changes from https://github.com/tahir-04/Hybrid-Automation-Framework.git
+ > C:\Program Files\Git\cmd\git.exe --version # timeout=10
+ > git --version # 'git version 2.53.0.windows.1'
+ > C:\Program Files\Git\cmd\git.exe fetch --tags --force --progress -- https://github.com/tahir-04/Hybrid-Automation-Framework.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Program Files\Git\cmd\git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 6dd43a1d267c0910c657e636ae7a9da67f661664 (refs/remotes/origin/main)
+ > C:\Program Files\Git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\cmd\git.exe checkout -f 6dd43a1d267c0910c657e636ae7a9da67f661664 # timeout=10
+Commit message: "Added Allure environment and categories configuration"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Verify Python)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Hybrid Automation Framework>"C:\Users\tahir\AppData\Local\Programs\Python\Python311\python.exe" --version 
+Python 3.11.0
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Install Dependencies)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Hybrid Automation Framework>"C:\Users\tahir\AppData\Local\Programs\Python\Python311\python.exe" -m pip install -r requirements.txt 
+Requirement already satisfied: allure-pytest==2.16.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 1)) (2.16.0)
+Requirement already satisfied: allure-python-commons==2.16.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 2)) (2.16.0)
+Requirement already satisfied: attrs==26.1.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 3)) (26.1.0)
+Requirement already satisfied: cachetools==7.1.4 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 4)) (7.1.4)
+Requirement already satisfied: certifi==2026.5.20 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 5)) (2026.5.20)
+Requirement already satisfied: cffi==2.0.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 6)) (2.0.0)
+Requirement already satisfied: chardet==7.4.3 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 7)) (7.4.3)
+Requirement already satisfied: charset-normalizer==3.4.7 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 8)) (3.4.7)
+Requirement already satisfied: colorama==0.4.6 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 9)) (0.4.6)
+Requirement already satisfied: cryptography==48.0.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 10)) (48.0.0)
+Requirement already satisfied: cssselect==1.4.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 11)) (1.4.0)
+Requirement already satisfied: cssutils==2.15.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 12)) (2.15.0)
+Requirement already satisfied: encutils==1.0.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 13)) (1.0.0)
+Requirement already satisfied: et_xmlfile==2.0.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 14)) (2.0.0)
+Requirement already satisfied: execnet==2.1.2 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 15)) (2.1.2)
+Requirement already satisfied: Faker==40.21.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 16)) (40.21.0)
+Requirement already satisfied: h11==0.16.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 17)) (0.16.0)
+Requirement already satisfied: idna==3.18 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 18)) (3.18)
+Requirement already satisfied: iniconfig==2.3.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 19)) (2.3.0)
+Requirement already satisfied: Jinja2==3.1.6 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 20)) (3.1.6)
+Requirement already satisfied: loguru==0.7.3 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 21)) (0.7.3)
+Requirement already satisfied: lxml==6.1.1 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 22)) (6.1.1)
+Requirement already satisfied: MarkupSafe==3.0.3 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 23)) (3.0.3)
+Requirement already satisfied: more-itertools==11.1.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 24)) (11.1.0)
+Requirement already satisfied: numpy==2.4.6 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 25)) (2.4.6)
+Requirement already satisfied: openpyxl==3.1.5 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 26)) (3.1.5)
+Requirement already satisfied: outcome==1.3.0.post0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 27)) (1.3.0.post0)
+Requirement already satisfied: packaging==26.2 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 28)) (26.2)
+Requirement already satisfied: pandas==3.0.3 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 29)) (3.0.3)
+Requirement already satisfied: pillow==12.2.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 30)) (12.2.0)
+Requirement already satisfied: pluggy==1.6.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 31)) (1.6.0)
+Requirement already satisfied: premailer==3.10.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 32)) (3.10.0)
+Requirement already satisfied: pycparser==3.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 33)) (3.0)
+Requirement already satisfied: Pygments==2.20.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 34)) (2.20.0)
+Requirement already satisfied: PySocks==1.7.1 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 35)) (1.7.1)
+Requirement already satisfied: pytest==9.0.3 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 36)) (9.0.3)
+Requirement already satisfied: pytest-check==2.8.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 37)) (2.8.0)
+Requirement already satisfied: pytest-html==4.2.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 38)) (4.2.0)
+Requirement already satisfied: pytest-metadata==3.1.1 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 39)) (3.1.1)
+Requirement already satisfied: pytest-rerunfailures==16.3 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 40)) (16.3)
+Requirement already satisfied: pytest-xdist==3.8.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 41)) (3.8.0)
+Requirement already satisfied: python-dateutil==2.9.0.post0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 42)) (2.9.0.post0)
+Requirement already satisfied: python-dotenv==1.2.2 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 43)) (1.2.2)
+Requirement already satisfied: requests==2.34.2 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 44)) (2.34.2)
+Requirement already satisfied: schedule==1.2.2 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 45)) (1.2.2)
+Requirement already satisfied: selenium==4.44.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 46)) (4.44.0)
+Requirement already satisfied: six==1.17.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 47)) (1.17.0)
+Requirement already satisfied: sniffio==1.3.1 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 48)) (1.3.1)
+Requirement already satisfied: sortedcontainers==2.4.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 49)) (2.4.0)
+Requirement already satisfied: tenacity==9.1.4 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 50)) (9.1.4)
+Requirement already satisfied: trio==0.33.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 51)) (0.33.0)
+Requirement already satisfied: trio-websocket==0.12.2 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 52)) (0.12.2)
+Requirement already satisfied: typing_extensions==4.15.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 53)) (4.15.0)
+Requirement already satisfied: tzdata==2026.2 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 54)) (2026.2)
+Requirement already satisfied: urllib3==2.7.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 55)) (2.7.0)
+Requirement already satisfied: webdriver-manager==4.1.2 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 56)) (4.1.2)
+Requirement already satisfied: websocket-client==1.9.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 57)) (1.9.0)
+Requirement already satisfied: win32_setctime==1.2.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 58)) (1.2.0)
+Requirement already satisfied: wsproto==1.3.2 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 59)) (1.3.2)
+Requirement already satisfied: yagmail==0.16.0 in C:\Users\tahir\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 60)) (0.16.0)
+
+[notice] A new release of pip is available: 26.0.1 -> 26.1.2
+[notice] To update, run: C:\Users\tahir\AppData\Local\Programs\Python\Python311\python.exe -m pip install --upgrade pip
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run Tests)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Hybrid Automation Framework>"C:\Users\tahir\AppData\Local\Programs\Python\Python311\python.exe" -m pytest tests             -v             --html=reports/report.html             --self-contained-html             --alluredir=allure-results 
+============================= test session starts =============================
+platform win32 -- Python 3.11.0, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\tahir\AppData\Local\Programs\Python\Python311\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.0', 'Platform': 'Windows-10-10.0.26200-SP0', 'Packages': {'pytest': '9.0.3', 'pluggy': '1.6.0'}, 'Plugins': {'allure-pytest': '2.16.0', 'anyio': '4.12.1', 'Faker': '40.21.0', 'check': '2.8.0', 'html': '4.2.0', 'metadata': '3.1.1', 'rerunfailures': '16.3', 'xdist': '3.8.0'}, 'CI': 'true', 'BUILD_NUMBER': '22', 'BUILD_ID': '22', 'BUILD_URL': 'http://localhost:8080/job/Hybrid%20Automation%20Framework/22/', 'NODE_NAME': 'built-in', 'JOB_NAME': 'Hybrid Automation Framework', 'BUILD_TAG': 'jenkins-Hybrid Automation Framework-22', 'EXECUTOR_NUMBER': '1', 'JENKINS_URL': 'http://localhost:8080/', 'WORKSPACE': 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Hybrid Automation Framework', 'GIT_COMMIT': '6dd43a1d267c0910c657e636ae7a9da67f661664', 'GIT_URL': 'https://github.com/tahir-04/Hybrid-Automation-Framework.git', 'GIT_BRANCH': 'origin/main', 'Project': 'Hybrid Automation Framework', 'Tester': 'Mohamed Tahir', 'Framework': 'Selenium-PyTest'}
+rootdir: C:\ProgramData\Jenkins\.jenkins\workspace\Hybrid Automation Framework
+configfile: pytest.ini
+plugins: allure-pytest-2.16.0, anyio-4.12.1, Faker-40.21.0, check-2.8.0, html-4.2.0, metadata-3.1.1, rerunfailures-16.3, xdist-3.8.0
+collecting ... collected 9 items
+
+tests/test_browser.py::test_launch_browser PASSED                        [ 11%]
+tests/test_config.py::test_read_config PASSED                            [ 22%]
+tests/test_excel_reader.py::test_excel_reader PASSED                     [ 33%]
+tests/test_logger.py::test_logger PASSED                                 [ 44%]
+tests/test_login.py::test_valid_login PASSED                             [ 55%]
+tests/test_login_ddt.py::test_login_ddt[Username-Password] PASSED        [ 66%]
+tests/test_login_ddt.py::test_login_ddt[Admin-admin123] PASSED           [ 77%]
+tests/test_login_ddt.py::test_login_ddt[Admin-wrong123] PASSED           [ 88%]
+tests/test_login_ddt.py::test_login_ddt[Wrong-admin123] PASSED           [100%]
+
+- Generated html report: file:///C:/ProgramData/Jenkins/.jenkins/workspace/Hybrid%20Automation%20Framework/reports/report.html -
+======================== 9 passed in 74.26s (0:01:14) =========================
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Publish HTML Report)
+[Pipeline] publishHTML
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at BUILD level C:\ProgramData\Jenkins\.jenkins\workspace\Hybrid Automation Framework\reports to Automation_20Test_20Report
+[htmlpublisher] Copying recursive using current thread
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Publish Allure Report)
+[Pipeline] allure
+[Allure] No installation selected, using the only available: Allure
+Using Allure 2
+Using Allure CLI: C:\ProgramData\Jenkins\.jenkins\tools\org.allurereport.jenkins.tools.AllureCommandlineInstallation\Allure\bin\allure.bat
+[Hybrid Automation Framework] $ C:\ProgramData\Jenkins\.jenkins\tools\org.allurereport.jenkins.tools.AllureCommandlineInstallation\Allure\bin\allure.bat generate "C:\ProgramData\Jenkins\.jenkins\workspace\Hybrid Automation Framework\allure-results" -c -o "C:\ProgramData\Jenkins\.jenkins\workspace\Hybrid Automation Framework\allure-report"
+Jun 08, 2026 10:39:38 AM io.qameta.allure.CommandLine main
+INFO: APP_HOME is not set, using default configuration
+Report successfully generated to C:\ProgramData\Jenkins\.jenkins\workspace\Hybrid Automation Framework\allure-report
+Allure report was successfully generated.
+Archiving Allure report via ArtifactManager…
+Allure artifact archived via ArtifactManager.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] archiveArtifacts
+Archiving artifacts
+‘screenshots/*.png’ doesn’t match anything: even ‘screenshots’ doesn’t exist
+No artifacts found that match the file pattern "screenshots/*.png". Configuration error?
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
