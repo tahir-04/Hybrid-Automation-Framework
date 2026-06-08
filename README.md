@@ -443,3 +443,6 @@ Planned enhancements:
 * Automation Control Center Dashboard
 
 ---
+
+<img width="1341" height="512" alt="image" src="https://github.com/user-attachments/assets/9c5b1c7c-6200-4ce5-9150-a53de8efadbf" />
+
