@@ -468,6 +468,12 @@ Planned enhancements:
 
 <img width="1365" height="715" alt="image" src="https://github.com/user-attachments/assets/97b71e09-61df-4de0-a7de-27b4ddcdf181" />
 
+<img width="1365" height="726" alt="image" src="https://github.com/user-attachments/assets/6a622a66-38f5-40e5-a8b0-e65bb5e15ea5" />
+
+<img width="1365" height="632" alt="image" src="https://github.com/user-attachments/assets/1b030a37-324f-4a16-bcbb-3b7991a5a9b7" />
+
+
+
 
 
 
